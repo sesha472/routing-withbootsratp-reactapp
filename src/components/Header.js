@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link, NavLink} from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -6,51 +7,52 @@ export default function Header() {
             
             <nav className="navbar bg-dark justify-content-center">
                 <li className="nav-link">
-                    <a href="/" className="nav-link">
+                    <a to="/" className="nav-link">
                        Refresh
                     </a>
                 </li>
+        
                 <li className="nav-link">
-                    <a href="/menu" className="nav-link">
+                    <NavLink to="/menu" className="nav-link" activeClassName="btn btn-primary">
                        sidebar
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-link">
-                    <a href="/dashboard" className="nav-link">
-                       Dashboard
-                    </a>
+                    <NavLink to="/dashboard" className="nav-link" activeClassName="btn btn-primary">
+                       dashboard
+                    </NavLink>
                 </li>
                 <li className="nav-link">
-                    <a href="/projects" className="nav-link">
+                    <Link to="/projects" className="nav-link">
                        my projects
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-link">
-                    <a href="/topics" className="nav-link">
+                    <NavLink to="/topics" className="nav-link" activeClassName="btn btn-primary">
                        my topics
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-link">
-                    <a href="/about" className="nav-link">
+                    <NavLink to="/about" className="nav-link" activeStyle={{backgroundColor:"hotpink"}}>
                     about
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-link">
-                    <a href="/contact" className="nav-link">
+                    <NavLink to="/contact" className="nav-link" activeClassName="btn btn-primary">
                        my contact
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-link">
-                    <a href="/login" className="nav-link">
+                    <NavLink to="/loginform" className="nav-link" activeClassName="btn btn-primary">
                        my login
-                    </a>
+                    </NavLink>
                 </li>
                 <li className="nav-link">
-                    <a href="/logout" className="nav-link">
+                    <Link to="/logout" className="nav-link">
                        my logout
-                    </a>
+                    </Link>
                 </li>
-
+  
           
             </nav>
         </div>
