@@ -27,7 +27,7 @@ function App() {
         <Content/>
         </Route>
       
-        <Route path="/dashboard" exact >
+        <Route path="/dashboard/:id" exact >
         <Dashboard/>
         </Route>
       
